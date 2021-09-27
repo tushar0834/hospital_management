@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+
+<title>SHIVI HEALTHCARE</title>
+  <head>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8" >
+<link href="/libraries/css/bootstrap.min.css" rel="stylesheet" media="all">
+<script src="/libraries/js/bootstrap.bundle.min.js" ></script>
+<link rel="stylesheet" type="text/css" href="design.css">
+  </head>
+<body id="LoginForm">
+<div class="container">
+
+<div class="login-form">
+<div class="main-div">
+    <div class="panel">
+   <h2>Doctor's Login</h2>
+   <p id="error">Please enter your email and password</p>
+   </div>
+    <form id="Login" >
+
+        <div class="form-group">
+
+
+            <input type="email" class="form-control" id="inputEmail" placeholder="Email Address">
+
+        </div>
+
+        <div class="form-group">
+
+            <input type="password" class="form-control" id="inputPassword" placeholder="Password">
+
+        </div>
+        <div class="forgot">
+        <a href="reset.html">Forgot password?</a>
+</div>
+        <button type="submit" class="btn btn-primary" id="submit">Login</button>
+
+    </form>
+    </div>
+
+</div></div></div>
+<script src="/libraries/jquery.min.js"></script>
+
+<script type="text/javascript">
+$(document).ready(function() {
+    $("#submit").click(function(e) {
+    var email= $('#inputEmail').val();
+    var password= $('#inputPassword').val();
+      event.preventDefault();
+
+    $.ajax({
+        type: "POST",
+        url: "get.php",
+        data: { "email": email, "password": password , "login" : "1"},
+        success:function(data)
+        {
+                if(data!="error")
+                {
+               
+                location.href="welcome.html";
+                }
+                else{
+                  $("#error").html("User name or password incorrect");
+                  $("#error").css(
+                    "color" , "red"
+                  )
+                }
+
+        }
+    });
+});
+});
+</script>
+</body>
+
+</html>

@@ -1,0 +1,30 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script src="/libraries/jquery.min.js"></script>
+
+<script type="text/javascript">
+		$(document).ready(function(){		 
+			$.ajax({
+				url: "https://webtechs.xyz/app/admin/userLogin.php",
+				type: "POST",
+				data: {"login":"1","userId":"12345","password":"12345"},
+				dataType: "JSON",
+
+				success: function(data)
+				{
+					
+				}
+			});
+		});
+	</script>

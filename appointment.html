@@ -1,0 +1,57 @@
+
+
+
+
+	<link href="libraries/css/bootstrap.min.css" rel="stylesheet" media="all">
+<script src="libraries/js/bootstrap.bundle.min.js" ></script>	
+<script src="libraries/js/bootstrap.min.js" ></script>	
+	
+	<link rel="stylesheet" type="text/css" href="libraries/fontawesome-free-5.15.3-web/css/all.css">
+	<script type="text/javascript" src="libraries/fontawesome-free-5.15.3-web/js/all.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/index.css">
+	<link rel="stylesheet" href="appoint.css">
+<!-- profile page -->
+	<div id="profile">
+		<section id="members1">
+		<div class="services-info">
+			<h1>Our <span id="blue">Doctor's</span></h1>
+			<p>Best Doctor's of our hospital</p>
+	
+ 
+</section>
+	</div>
+	<div class="container" style="color: black;">
+ <div class="row" id="alldoctors">
+
+</div>
+</div>
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Book Slot</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body" style="    margin-left: auto;
+    margin-right: auto;">
+    <div id="book1">
+        <p>Choose the slot date </p>
+        <p><input type="date" id="date"></p>
+        <span id="dateerr" style="display: none;"></span>
+        <div id="avliablity">
+        	
+        </div>
+      </div>
+      <div id="book2">
+        <span id="book3"></span>
+      </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary" id="book" style="display: none;">Book slot</button>
+      </div>
+    </div>
+  </div>
+</div>
+	<script src="libraries/jquery.min.js"></script>
+<script type="text/javascript" src="appointment.js"></script>

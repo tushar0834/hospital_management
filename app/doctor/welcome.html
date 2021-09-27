@@ -1,0 +1,272 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shivi healthcare</title>
+<meta charset="UTF-8" >
+<link href="/libraries/css/bootstrap.min.css" rel="stylesheet" media="all">
+<script src="/libraries/js/bootstrap.bundle.min.js" ></script>
+<link rel="stylesheet" href="design.css">
+<link rel="stylesheet" href="loader.css">
+</head>
+<body>
+    <div class="scene">
+  <div class="plane">
+    <div class="cube cube--0">
+      <div class="cube__side"></div>
+      <div class="cube__side"></div>
+      <div class="cube__side"></div>
+      <div class="cube__side"></div>
+      <div class="cube__side"></div>
+      <div class="cube__side"></div>
+    </div>
+    <div class="shadow shadow--0"></div>
+    <div class="cube cube--1">
+      <div class="cube__side"></div>
+      <div class="cube__side"></div>
+      <div class="cube__side"></div>
+      <div class="cube__side"></div>
+      <div class="cube__side"></div>
+      <div class="cube__side"></div>
+    </div>
+    <div class="shadow shadow--1"></div>
+    <div class="cube cube--2">
+      <div class="cube__side"></div>
+      <div class="cube__side"></div>
+      <div class="cube__side"></div>
+      <div class="cube__side"></div>
+      <div class="cube__side"></div>
+      <div class="cube__side"></div>
+    </div>
+    <div class="shadow shadow--2"></div>
+    <div class="cube cube--3">
+      <div class="cube__side"></div>
+      <div class="cube__side"></div>
+      <div class="cube__side"></div>
+      <div class="cube__side"></div>
+      <div class="cube__side"></div>
+      <div class="cube__side"></div>
+    </div>
+    <div class="shadow shadow--3"></div>
+    <div class="cube cube--4">
+      <div class="cube__side"></div>
+      <div class="cube__side"></div>
+      <div class="cube__side"></div>
+      <div class="cube__side"></div>
+      <div class="cube__side"></div>
+      <div class="cube__side"></div>
+    </div>
+    <div class="shadow shadow--4"></div>
+    <div class="cube cube--5">
+      <div class="cube__side"></div>
+      <div class="cube__side"></div>
+      <div class="cube__side"></div>
+      <div class="cube__side"></div>
+      <div class="cube__side"></div>
+      <div class="cube__side"></div>
+    </div>
+    <div class="shadow shadow--5"></div>
+    <div class="cube cube--6">
+      <div class="cube__side"></div>
+      <div class="cube__side"></div>
+      <div class="cube__side"></div>
+      <div class="cube__side"></div>
+      <div class="cube__side"></div>
+      <div class="cube__side"></div>
+    </div>
+    <div class="shadow shadow--6"></div>
+    <div class="cube cube--7">
+      <div class="cube__side"></div>
+      <div class="cube__side"></div>
+      <div class="cube__side"></div>
+      <div class="cube__side"></div>
+      <div class="cube__side"></div>
+      <div class="cube__side"></div>
+    </div>
+    <div class="shadow shadow--7"></div>
+  </div>
+</div>
+        <div class="container-fluid" style="padding: 1px;">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light header_doctor">
+            
+              <a class="navbar-brand" href="#" id="name" value=""></a>
+              
+                <form class="d-flex">
+                  <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" hidden>
+                  <button type="button" data-backdrop="static" data-keyboard="false" class="btn btn-primary mt-2" id="Doctor" data-bs-toggle="modal" data-bs-target="#exampleModal">Profile</button>
+                </form>
+            
+          </nav>
+          </div>
+
+          <div class="modal fade" id="exampleModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel">Your Details</h5>
+                  <button class="btn btn-primary" id="edit_modal" style="margin:auto">Edit</button>
+                  <button type="button" id="dismiss" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+
+                <div class="modal-body">
+
+                  <table class="table table-striped">
+                    <tbody id="show">
+
+                    </tbody>
+                  </table>
+
+                </div>
+
+              </div>
+            </div>
+          </div>
+         
+
+              <div class="container mt-5 table-responsive">
+                <table class="table table-striped ">
+               
+                        <th>SRno</th>
+                        <th>Action</th>
+                        <th>Patient Name</th>
+                        <th>Problem</th>
+                        <th>Blood Pressure</th>
+                        <th>Weight</th>
+                        <th>Apointment time</th>
+                             <tbody id="show_data">
+                            </tbody>
+                </table>
+                <button class="btn btn-primary" id="next">NEXT</button>
+                <button class="btn btn-primary" id="Prev">PREVIOUS</button>
+              </div>
+        
+</body>
+
+<script src="/libraries/jquery.min.js"></script>
+<script>
+
+    $(document).ready(function(){
+        $("#next").hide();
+        $("#Prev").hide();
+     
+         setTimeout(getdata,1000);
+    
+    });
+    function getdata()
+    {
+        $.ajax({
+            url: "get.php",
+            type: "POST", 
+            data: {"SES":"1" }, 
+            dataType: "JSON",
+            success:function(data){
+                if(data[0]!=null)
+                {
+                    $(".scene").hide();
+                    $("#name").html("DR. "+data[0]);
+                    $("#name").val(data[0]);
+                    
+                    $("#show_data").html("");
+                    for(var i=1;i<=data[2];i++)
+                    {
+                        var html="<tr><td>"+i+"</td>"+"<td><button class='btn buton' value="+i+">Treat</button>"+"<td>"+data[1][i][0]+" "+data[1][i][1]+"</td>"+"<td>"+data[1][i][3]+"</td><td>"+data[1][i][2]+"</td><td>"+data[1][i][4]+"</td><td>"+data[1][i][5]+"</td></tr>";
+                        $("#show_data").append(html);
+                      
+                    }
+                    
+                    
+
+                }
+                else
+                {
+                    location.href="index.html";
+                   
+                }
+            },
+            complete:function(data){
+               setTimeout(getdata,500);
+              }
+        });
+    }
+       
+    $("#Doctor").on("click",function(e) { 
+            $.ajax({
+                url: "get.php",
+                type: "POST", 
+                data: { profile : 2 },
+                dataType: "JSON",
+                success : function(data){
+                    
+                    $("#show").html(
+                        "<tr><td>ID </td><td><input type='text' id='d_id'  value='"
+                         + data.id +
+                         "' style='border: none;background-color:#00000000' disabled></td></tr>"
+                         +
+                        "<tr><td>Full name </td><td><input type='text'  value='"
+                         + data.doctor_full_name +
+                         "' style='border: none;background-color:white' disabled></td></tr>"
+                         +
+                         "<tr><td>Mobile No</td><td><input type='text' id='d_mobile' value='"
+                         + data.d_mobile+
+                         "' style='border: none;background-color:#00000000' disabled></td></tr>"
+                         +
+                         "<tr><td>Email </td><td><input type='text' id='email' value='"
+                         + data.email +
+                         "' style='border: none;background-color:white' disabled></td></tr>"
+                         +
+                         "<tr><td>User name </td><td><input type='text' value='"
+                         + data.username +
+                         "' style='border: none;background-color:#00000000' disabled></td></tr>"
+                         +
+                         "<tr><td>Speciality </td><td><input type='text' value='"
+                         + data.speciality +
+                         "' style='border: none;background-color:white' disabled></td></tr>"
+                         +
+                         "<tr><td>Profession </td><td><input type='text' value='"
+                         + data.profession +
+                         "' style='border: none;background-color:#00000000' disabled></td></tr>"
+                         
+                         );
+
+
+                }
+            });
+    });
+    
+$("#edit_modal").on("click",function(e) { 
+$("#email").attr('disabled', false).css({ 'border' : '1px solid black' });   
+$("#d_mobile").attr('disabled', false).css({ 'border' : '1px solid black' });   ;
+$("#email").change(function(){
+    var type="email";
+    var change=$("#email").val();
+    var id=$("#d_id").val();
+    send_ajax(type,change,id);
+});
+$("#d_mobile").change(function(e){
+    var type="d_mobile";
+    var change=$("#d_mobile").val();
+    var id=$("#d_id").val();
+    send_ajax(type,change,id);
+});
+});
+function send_ajax(type,change,id)
+{
+    $.ajax({
+        url: "get.php",
+        type: "POST",
+        data: {"type": type, "change": change, "id": id,"edit": "edit"},
+        dataType: "JSON",
+        success: function(data)
+        {
+            
+        }
+    });
+}
+
+
+
+</script>
+</html>

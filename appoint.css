@@ -1,0 +1,21 @@
+
+
+
+@media (min-width: 280px)  
+			{
+				.card!important
+					{
+					    margin-top: 5%;
+					    margin-bottom: 5%;
+					    width: 48rem!important;
+					}
+			}
+			.card p
+			{
+				font-size: 29px;
+			}
+			.card
+			{
+				    flex-direction: row!important;
+			}
+			

@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>hospital_management_system</title>
+
+	
+	<link href="libraries/css/bootstrap.min.css" rel="stylesheet" media="all">
+<script src="libraries/js/bootstrap.bundle.min.js" ></script>	
+	<link rel="stylesheet" type="text/css" href="css/index.css">
+	<link rel="stylesheet" type="text/css" href="libraries/fontawesome/css/all.css">
+	<script type="text/javascript" src="libraries/fontawesome/js/all.js"></script>
+
+</head>
+<body>
+	<div id="index">
+						<header id="header">
+					        <div class="container-fluid">
+							<nav>
+								<div class="logo">
+									<span id="blue">S</span>hivi<span id="blue">  H</span>ealth<span id="blue">C</span>are
+								</div>
+								<div >
+									<ul class="menu d-none d-sm-none d-md-none d-lg-block">
+									<a href="#index">HOME</a>
+									<a href="#services">SERVICES</a>
+									<a href="#about">ABOUT</a>
+									<a href="#contact">CONTACT</a>
+
+								    </ul>
+					                            <button class="btn btn-primary d-lg-none d-xl-none d-xxl-none" id="toggle" value="false"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-justify" viewBox="0 0 16 16">
+					        <path fill-rule="evenodd" d="M2 12.5a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5zm0-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5zm0-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5zm0-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5z"/>
+					        </svg></button>
+								</div>
+					           
+							</nav>
+					        </div>
+					        <div   style="display: none;  "  id="menu_toggle" class="menu_toggle" >
+					             <div id='menu_bar' class="menu_bar" >
+								<li><a href="#">HOME</a></li>
+									<li><a href="#">SERVICES</a></li>
+									<li><a href="#">ABOUT</a></li>
+									<li><a href="#">CONTACT</a></li>
+					                </div>
+					        </div>
+							<div class="container">
+								<div class="left">
+					            <!-- Slideshow container -->
+					            <div class="slideshow-container">
+					            <!-- Full-width images with number and caption text -->
+					            <div class="mySlides fade">
+					             
+					              <img src="images/1.jpg" style="width:80%">
+					            </div>
+					            <div class="mySlides fade">
+					            
+					              <img src="images/2.jpg" style="width:80%">
+					            </div>
+					            <div class="mySlides fade">
+					           
+					              <img src="images/3.jpg" style="width:80%">
+					            </div>
+					            <div class="mySlides fade">
+					           
+					              <img src="images/4.jpg" style="width:80%">
+					            </div>
+					        </div>
+					        <br>
+
+					               <!-- The dots/circles -->
+					            <div style="text-align:center">
+					                <span class="dot" onclick="currentSlide(1)"></span>
+					                <span class="dot" onclick="currentSlide(2)"></span>
+					                <span class="dot" onclick="currentSlide(3)"></span>
+					                <span class="dot" onclick="currentSlide(4)"></span>
+					            </div>
+					     	</div>
+								<div class="right">
+									<h2>Stay Home Stay Safe</h2>
+									<h1>WE ARE THE BEST DOCTORS</h1>
+									<p>We are here for your care 24/7. Any help just call us.</p>
+									<button type="button" class="btn btn-primary" id="appointment" style="cursor: pointer;">
+										Make appointment
+									  </button>
+								</div>
+							</div>
+						</header>
+						<section id="about">
+							<div class="about-row">
+								<div class="about-left-col">
+									<h1>About <span id="blue">Me</span></h1>
+									<p>Shivi health care is the best hospital to visit in</p><br>
+									<p>Our motto is "come first time and get rid of the disease"</p><br>
+									<p>Shivi health care is founded by Tushar Bhargava(founder) and Shivani(co-founder)</p>
+									<button class="c-btn">Read more</button>
+								</div>
+								<div class="about-right-col">
+									<img src="images/5.jpg">
+								</div>
+							</div>
+						</section>
+						<section id="signup">
+							<div class="signup-row">
+								<div class="signup-left-col">
+									<img src="images/6.jpg">
+								</div>
+								<div class="signup-right-col">
+									<h1>BEING <span id="blue">HEALTHY</span></h1>
+									<h2>& Fit</h2>
+									
+								</div>
+							</div>
+						</section>
+						<section id="services">
+							<div class="services-info">
+								<h1>Our<span id="blue">Services</span></h1>
+								<p>What we provide</p>
+							</div>
+							<div class="services-row">
+								<div class="services-box">
+									<i class="fa fa-suitcase" aria-hidden="true"></i>
+									<h2>Trearments</h2>
+									<p>the all the world best equipments for the trearments of any diseases</p>
+								</div>
+								<div class="services-box">
+									<i class="fa fa-flask" aria-hidden="true"></i>
+									<h2>Laboratory</h2>
+									<p>Also devloped it's own laboratory providing all the medical tests itself inside the Hospital.</p>
+								</div>
+								<div class="services-box">
+									<i class="fa fa-user-md" aria-hidden="true"></i>
+									<h2>Doctors</h2>
+									<p>Our doctors are well experinced there field and do thier best to treat the disease suffered by the patients. </p>
+								</div>
+								<div class="services-box">
+									<i class="fa fa-optin-monster" aria-hidden="true"></i>
+									<h2>Management</h2>
+									<p>Its own management system that digital handles the patient,thus providing hastlefree treatment.</p>
+								</div>
+								<div class="services-box">
+									<i class="fa fa-hospital" aria-hidden="true"></i>
+									<h2>Trearments</h2>
+									<p>the all the world best equipments for the trearments of any diseases</p>
+								</div>
+								<div class="services-box">
+									<i class="fa fa-hospital" aria-hidden="true"></i>
+									<h2>Trearments</h2>
+									<p>the all the world best equipments for the trearments of any diseases</p>
+								</div>
+							</div>
+						</section>
+						<section id="members">
+							<div class="services-info">
+								<h1>Our <span id="blue">Members</span></h1>
+								<p>What our hospital member says</p>
+							</div>
+					        <div class="testimonial">
+						        <div class="small-container">
+							      <div class="row">
+								    <div class="col-3">
+									 <i class="fa fa-quote-left"></i>
+									 <p>From delhi,in this hospital all the world best equipments for the trearments of any diseases</p>
+									<div class="rating">
+									 <i class="fa fa-star"></i>
+									 <i class="fa fa-star"></i>
+									 <i class="fa fa-star"></i>
+									 <i class="fa fa-star"></i>
+									 <i class="fa fa-star-o"></i>
+								    </div>
+								     <img src="images/girl.png">
+								     <h3>Ayesha Singh</h3>
+								   </div>
+								    <div class="col-3">
+									 <i class="fa fa-quote-left"></i>
+									 <p>From lucknow,Shivi healthcare is the best hospital for all diseases</p>
+									  <div class="rating">
+									  <i class="fa fa-star"></i>
+									  <i class="fa fa-star"></i>
+									  <i class="fa fa-star"></i>
+									  <i class="fa fa-star"></i>
+									  <i class="fa fa-star-o"></i>
+								      </div>
+								       <img src="images/girl2.png">
+								       <h3>Adhiti Singh</h3>
+								  </div>
+								<div class="col-3">
+									<i class="fa fa-quote-left"></i>
+									<p>Form Gurgow, Shivi healthcare is the best hospital, because its provide all the best servises</p>
+									<div class="rating">
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star-o"></i>
+								    </div>
+								    <img src="images/girl3.png">
+								    <h3>Shivani Singh</h3>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					</section>
+							
+						<section id="work">
+							<div class="services-info">
+								<h1>Our<span id="blue">Works</span></h1>
+								<p>What we provide</p>
+							</div>
+							<div class="services-row">
+								<div class="work-box">
+									<img src="images/7.jpg">
+								</div>
+								<div class="work-box">
+									<img src="images/8.jpg">
+								</div>
+								<div class="work-box">
+									<img src="images/9.jpg">
+								</div>
+								<div class="work-box">
+									<img src="images/10.jpg">
+								</div>
+								<div class="work-box">
+									<img src="images/11.jpg">
+								</div>
+								<div class="work-box">
+									<img src="images/12.jpg">
+								</div>
+							</div>
+						</section>
+						<section id="contact">
+							<div class="services-info">
+								<h1>Get in <span id="blue">Touch</span></h1>
+								<p>We are Available</p>
+							</div>
+							<div class="contact-row">
+								<div class="contact-left-col">
+									<div class="form">
+										<input type="text" name="" placeholder="E-mail">
+										<input type="text" name="" placeholder="subject"><br>
+										<input type=text  placeholder="message"></textarea>
+										<br><button class="c_btn">send</button>
+									</div>
+								</div>
+								<div class="contact-right-col">
+									<h6><i class="fa fa-envelope-o" aria-hidden="true"></i>E-mail</h6><p>shivi123456789@gmail.com</p>
+									<h6><i class="fa fa-phone" aria-hidden="true"></i>Mobile</h6><p>7645332866,9032567890</p>
+									
+									<h6><i class="fa fa-location-arrow" aria-hidden="true"></i>Address</h6>
+									<p>Surya Kiran Biulding <br>
+									Gurgon,Delhi<br>
+									4100601
+								    </p>
+								</div>
+							</div>
+						</section>
+					  <footer>
+					  	<div class="containers">
+					  		<div class="sec aboutus">
+					  			<h2>About Us</h2>
+									<p>Shivi health care is the best hospital to visit in. Our motto is "come first time and get rid of the disease. Shivi health care is founded by Tushar Bhargava(founder) and Shivani(co-founder)</p>
+					  	<!-- 	<ul class="sci">
+					  			<li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+					  			<li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+					  			<li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+					  			<li><a href="#"><i class="fa fa-youtube-play" aria-hidden="true"></i></a></li>
+					  		</ul> -->
+					  	</div>
+					  	<div class="sec quicklinks">
+					  		<h2>Quick Links</h2>
+					  		<ul>
+					  			<li><a href="#">About</a></li>
+					  			<li><a href="#">FAQ</a></li>
+					  			<li><a href="#">Privacy Policy</a></li>
+					  			<li><a href="#">Help</a></li>
+					  			<li><a href="#">Terms & Conditions</a></li>
+					  			<li><a href="#">Contact</a></li>
+					  		</ul>
+					  	</div>
+					  	<div class="sec contact">
+					  		<h2>Contact Info</h2>
+					  		<ul class="info">
+					  			<li>
+					  				<span><i class="fa fa-map-marker" aria-hidden="true"></i></span>
+					  				<span>Surya Kiran Biulding <br>
+									Gurgon,Delhi<br>
+									4100601
+								    </span>
+					  			</li>
+					  			<li>
+					  				<span><i class="fa fa-phone" aria-hidden="true"></i></span>
+					  				<p><a href="tel:7645332866">764 533 2866</a><br>
+					  				<a href="tel:9032567890">903 256 7890</a></p>
+					  			</li>
+					  			<li>
+					  				<span><i class="fa fa-envelope" aria-hidden="true"></i></span>
+					  				<p><a href="mailto:shivi123456789@gmail.com">shivi123456789@gmail.com</a></p>
+					  			</li>
+					  		</ul>
+					  	</div>
+					  	</div>
+					  </footer>
+					  <div class="copyrightText">
+					  	<p class="copyright">Made with<i class="fa fa-heart-o"></i>by shivani</p>
+					 We are here for your care 24/7. Any help just call us.
+
+					</div>
+</div>
+
+<div id="login_page">
+
+
+	<div class="wrapper">
+		<div class="headline">
+			<h1>Welcome to Shivi Healthcare</h1>
+		</div>
+		<div class="form1">
+			<div class="signup">
+				<div class="form-group">
+					<input type="text" name="" id="fullname" placeholder="full name" required="">
+					<span id="errname"style="display:none;"></span>
+				</div>
+				<div class="form-group">
+					<input type="email" name="" id="useremail" placeholder="email" required="">
+					<span id="signemail"style="display:none;"></span>
+				</div>
+				<div class="form-group">
+					<input type="password" name="" id="user_password" placeholder="password" required="">
+					<span id="errpassword" style="display:none;"></span>
+				</div>
+				<div class="form-group">
+					<input type="number" name="" id="number" placeholder="your phone number" required="">
+					<span id="errmobile"style="display:none;"></span>
+				</div>
+				<div class="form-group">
+					<input type="text" name="" id="problem" placeholder="your problem in short" required="">
+					<span id="errproblem"style="display:none;"></span>
+				</div>
+				<button type="submit" class="btn" id="sign_up">SIGN UP</button>
+				<div class="account-exist" >
+					Already have an account? <a class="nav-link" id="loginbtn" style="cursor: pointer;">Login</a>
+				</div>
+			</div>
+			<div class="signin" id="sign">
+				<span id="errr" style="display: none;"></span>
+				<div class="form-group">
+					<span class="error" style="display:none;">Email is required</span>
+					<input type="text" id="emailusr" name="" placeholder="email" required="">
+				</div>
+				<div class="form-group">
+					<span class="perror" style="display:none;">Password is required</span>
+					<input type="password" name="" id="password" placeholder="password" required="">
+				</div>
+				<div class="forget-password">
+					<div class="check-box">
+						<input type="checkbox" name="" id="checkbox">
+						<label for="checkbox">Remember me</label>
+					</div>
+					<a href="#">Forget password?</a>
+				</div>
+				<button type="submit" class="btn" id="log_on">LOGIN</button>
+				<div class="account-exist">
+					Create New a account? <a href="#" id="signin_p">Signup</a>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	</div>
+	
+</body>
+</html>
+<script src="libraries/jquery.min.js"></script>
+<script type="text/javascript" src="backnd.js"></script>
+<script>
+		$(document).ready(function(){
+		$("#sign").hide();
+		$("#login_page").hide();
+			$("#profile").hide();	
+	$("#loginbtn").on('click',function(e){
+
+	$(".signin").show();
+	$(".signup").hide();
+
+	
+});
+	$("#signin_p").on('click',function(){
+
+	$(".signin").hide();
+	$(".signup").show();
+	});
+	
+	
+		$("#appointment").on('click',function(e){
+			$("#index").hide();
+			$("#login_page").show();
+		});
+
+	$("#toggle").on('click', function(e){
+        if($("#toggle").val()=="false")
+        {
+        
+        $("#menu_toggle").slideDown( "slow");
+       
+        $("#toggle").val("true");
+        }
+        else
+        {
+        	$("#header").css({
+        		'height' : '1511px!important'
+        	});
+                    $("#menu_toggle").slideUp( "slow");
+             $("#toggle").val("false");
+        }
+    });
+		});
+</script>
+
+
+
+<script src="js/main.js"></script>
+</body>
+</html>
